@@ -1,0 +1,140 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(1, 55, 43);
+	transition: all 0.4s ease;
+}
+body.dark {
+	background-color: #fff;
+}
+.container {
+	width: 75%;
+	margin: 10px auto;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+}
+.content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 15px;
+	border-radius: 8px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+	position: relative;
+	color: rgb(1, 55, 43);
+	transition: all 0.4s ease;
+	background-color: #fff;
+}
+#switch:checked ~ .content {
+	background-color: rgb(1, 55, 43);
+	color: #fff;
+}
+.content__img {
+	display: flex;
+	flex: 0.2;
+	text-align: center;
+	align-items: center;
+	padding: 3px;
+	border-radius: 10px;
+	background-color: rgb(1, 55, 43);
+}
+#switch:checked ~ .content .content__img {
+	background-color: #fff;
+}
+.content__img > img {
+	width: 100%;
+	object-fit: contain;
+	border-radius: 10px;
+	border: 3px solid #fff;
+}
+#switch:checked ~ .content .content__img > img {
+	border-color: rgb(1, 55, 43);
+}
+.content__details {
+	flex: 0.8;
+	padding: 15px 20px;
+}
+.name {
+	font-size: 1.5rem;
+	margin-bottom: 3px;
+	text-decoration: underline;
+}
+.job {
+	font-size: 1rem;
+	margin-bottom: 10px;
+}
+.content__details button {
+	display: block;
+	outline: none;
+	border: none;
+	margin: 15px 0;
+	padding: 6px 8px;
+	background-color: rgb(1, 55, 43);
+	border-radius: 6px;
+	color: #fff;
+	transition: all 0.4s ease-in;
+}
+.content__details button:hover {
+	transform: scale(0.97);
+}
+#switch:checked ~ .content button {
+	color: rgb(1, 55, 43);
+	background-color: #fff;
+}
+.media-icons {
+	position: absolute;
+	bottom: 10px;
+	right: 15px;
+	display: inline-flex;
+}
+.media-icons a {
+	margin: 0 5px;
+	text-decoration: none;
+	color: rgb(1, 55, 43);
+	opacity: 0.8;
+}
+.media-icons a:hover {
+	opacity: 1;
+}
+#switch:checked ~ .content .media-icons a {
+	color: #fff;
+}
+.content .toggle {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	width: 40px;
+	height: 20px;
+	background-color: rgb(1, 55, 43);
+	border-radius: 60px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.toggle .circle {
+	width: 16px;
+	height: 16px;
+	margin-left: 2px;
+	border-radius: 50px;
+	background-color: #fff;
+	transition: all 0.4s ease-in-out;
+}
+
+#switch {
+	display: none;
+}
+#switch:checked ~ .content .toggle {
+	background-color: #fff;
+}
+#switch:checked ~ .content .circle {
+	margin-left: 22px;
+	background-color: rgb(1, 55, 43);
+}

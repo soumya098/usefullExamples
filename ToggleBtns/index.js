@@ -11,5 +11,11 @@ const hamMenu2 = document.querySelector("#toggle__ham2");
 btn2.addEventListener("click", () => {
 	btn2.classList.toggle("active");
 	hamMenu2.classList.toggle("active");
-	console.log(btn2, hamMenu2);
+});
+
+const btn3 = document.querySelector("#btn3");
+const hamMenu3 = document.querySelector("#toggle__ham3");
+btn3.addEventListener("click", () => {
+	btn3.classList.toggle("active");
+	hamMenu3.classList.toggle("active");
 });
