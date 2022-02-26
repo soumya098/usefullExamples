@@ -12,14 +12,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
     - name: "Node setup"
         uses: actions/setup-node@v1
         with:
           node-version: "14.18.1"
     - name: Install Dependencies
       run: npm install
+      
     - name: Build the site in the jekyll/builder container
+      uses: actions/checkout@v2
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
