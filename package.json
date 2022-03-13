@@ -6,8 +6,8 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"clean": "rimraf dist",
-		"imagemin": "imagemin img/* --out-dir='dist/img' && imagemin DayNightToogle/images/* --out-dir='dist/DayNightToogle/img'",
-		"copyfile": "copyfiles -f carousel/*.js dist/carousel/js && copyfiles -f DayNightToogle/*.js dist/DayNightToogle/js",
+		"imagemin": "imagemin img/* --out-dir='dist/img' && imagemin DayNightToogle/images/* --out-dir='dist/DayNightToogle/images'",
+		"copyfile": "copyfiles -f carousel/*.js dist/carousel && copyfiles -f DayNightToogle/*.js dist/DayNightToogle",
 		"index": "usemin index.html -d dist -o dist/index.html --htmlmin",
 		"carousel": "usemin carousel/index.html -d dist/carousel -o dist/carousel/index.html --htmlmin",
 		"daynight": "usemin DayNightToogle/index.html -d dist/DayNightToogle -o dist/DayNightToogle/index.html --htmlmin",
