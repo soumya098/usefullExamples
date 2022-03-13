@@ -4,22 +4,40 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- build:css css/main.css -->
 		<link
 			rel="stylesheet"
 			href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
 		/>
 		<link rel="stylesheet" href="style.css" />
+		<!-- endbuild -->
 		<title>Carousel</title>
 	</head>
 	<body>
 		<div>
 			<button type="button" class="btn btn-primary">Primary</button>
+			<div>
+				<h3>using vanilla js</h3>
+				<div class="carousel">
+					<button class="carousel__button"></button>
+					<div class="carousel__track-container">
+						<ul class="carousel__track">
+							<li class="carousel__slide"></li>
+							<li class="carousel__slide"></li>
+							<li class="carousel__slide"></li>
+						</ul>
+					</div>
+					<button class="carousel__button"></button>
+				</div>
+			</div>
 		</div>
 
 		<!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+		<!-- build:js js/main.js -->
 		<script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
 		<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
 		<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- endbuild -->
 		<script src="index.js"></script>
 	</body>
 </html>

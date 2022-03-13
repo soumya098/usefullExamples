@@ -1,18 +1,34 @@
 {
-  "name": "advancedcss-js",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com-personal:soumya098/usefullExamples.git"
-  },
-  "author": "Soumya ranjan nayak",
-  "license": "ISC",
-  "dependencies": {
-    "bootstrap": "^4.6.0"
-  }
+	"name": "advancedcss-js",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"clean": "rimraf dist",
+		"imagemin": "imagemin img/* --out-dir='dist/img' && imagemin DayNightToogle/images/* --out-dir='dist/DayNightToogle/img'",
+		"copyfile": "copyfiles -f carousel/*.js dist/carousel/js && copyfiles -f DayNightToogle/*.js dist/DayNightToogle/js",
+		"index": "usemin index.html -d dist -o dist/index.html --htmlmin",
+		"carousel": "usemin carousel/index.html -d dist/carousel -o dist/carousel/index.html --htmlmin",
+		"daynight": "usemin DayNightToogle/index.html -d dist/DayNightToogle -o dist/DayNightToogle/index.html --htmlmin",
+		"build": "npm run clean && npm run imagemin && npm run copyfile && npm run index && npm run carousel && npm run daynight"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com-personal:soumya098/usefullExamples.git"
+	},
+	"author": "Soumya ranjan nayak",
+	"license": "ISC",
+	"dependencies": {
+		"bootstrap": "^4.6.0",
+		"copyfiles": "^2.4.1",
+		"cssmin": "^0.4.3",
+		"htmlmin": "^0.0.4",
+		"imagemin": "^8.0.1",
+		"minimist": "^1.2.5",
+		"rimraf": "^3.0.2",
+		"uglifyjs": "^2.4.11",
+		"usemin": "^0.6.0",
+		"usemin-cli": "^0.6.0"
+	}
 }
