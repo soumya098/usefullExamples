@@ -7,11 +7,12 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"clean": "rimraf dist",
 		"imagemin": "imagemin DayNightToogle/images/* --out-dir='dist/DayNightToogle/images'",
-		"copyjsfile": "copyfiles -f js/* dist/js && copyfiles -f carousel/*.js dist/carousel && copyfiles -f DayNightToogle/*.js dist/DayNightToogle",
-		"index": "usemin index.html -d dist -o dist/index.html --htmlmin && usemin toggle_btns.html -d dist -o dist/toggle_btns.html --htmlmin && usemin modals.html -d dist -o dist/modals.html --htmlmin",
+		"copyjsfile": "copyfiles -f *.js dist/ && copyfiles -f carousel/*.js dist/carousel && copyfiles -f DayNightToogle/*.js dist/DayNightToogle && copyfiles -f modals/*js dist/modals",
+		"index": "usemin index.html -d dist -o dist/index.html --htmlmin && usemin toggle_btns.html -d dist -o dist/toggle_btns.html --htmlmin",
+		"modal": "usemin modals/index.html -d dist/modals -o dist/modals/index.html --htmlmin",
 		"carousel": "usemin carousel/index.html -d dist/carousel -o dist/carousel/index.html --htmlmin",
 		"daynight": "usemin DayNightToogle/index.html -d dist/DayNightToogle -o dist/DayNightToogle/index.html --htmlmin",
-		"build-folders": "npm run index && npm run carousel && npm run daynight",
+		"build-folders": "npm run index && npm run carousel && npm run daynight && npm run modal",
 		"build": "npm run clean && npm run imagemin && npm run copyjsfile && npm run build-folders"
 	},
 	"repository": {
