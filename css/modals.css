@@ -1,0 +1,18 @@
+.modal-page {
+	padding: 10px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+#myModal1 {
+	overflow-y: hidden;
+}
+.modal-dialog {
+	margin-top: 100px;
+}
+.modal-content {
+	box-shadow: 1px 1px 8px #3f8cf064;
+}
+.modal-header {
+	cursor: move;
+}

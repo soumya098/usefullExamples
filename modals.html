@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- build:css css/main.css -->
+		<link
+			rel="stylesheet"
+			href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="./css/modals.css" />
+		<!-- endbuild -->
+		<title>Modals</title>
+	</head>
+	<body class="modal-page">
+		<div class="container-fluid">
+			<div class="text-center">
+				<!-- Button trigger modal -->
+				<button
+					class="btn btn-primary"
+					data-toggle="modal"
+					data-target="#myModal1"
+				>
+					Launch modal
+				</button>
+			</div>
+
+			<!-- Modal -->
+			<div
+				class="modal fade"
+				data-backdrop="false"
+				id="myModal1"
+				tabindex="-1"
+				role="dialog"
+				aria-labelledby="myModalLabel"
+			>
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title" id="myModalLabel">Modal Using Jquery</h4>
+							<button
+								type="button"
+								class="close"
+								data-dismiss="modal"
+								aria-label="Close"
+							>
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p>This draggable modal is made using Jquery and jQuery-ui</p>
+							<iframe
+								width="100%"
+								height="315"
+								frameborder="0"
+								allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- build:js js/main.js -->
+		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+		<script src="node_modules/jquery/dist/jquery.js"></script>
+		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="node_modules/jquery-ui-dist/jquery-ui.js"></script>
+		<!-- endbuild -->
+		<script src="./js/modals.js"></script>
+	</body>
+</html>
